@@ -41,6 +41,7 @@
             this.C_Button.Name = "C_Button";
             this.C_Button.Size = new System.Drawing.Size(410, 145);
             this.C_Button.TabIndex = 0;
+            this.C_Button.TabStop = false;
             this.C_Button.Text = "나를 잡아봐";
             this.C_Button.UseVisualStyleBackColor = false;
             this.C_Button.Click += new System.EventHandler(this.C_Button_Click);

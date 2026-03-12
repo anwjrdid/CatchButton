@@ -27,6 +27,7 @@ namespace CatchButton
         {
             InitializeComponent();
             originalSize = C_Button.Size; //처음 버튼 크기를 기억해둡니다.
+            this.Activated += (s, e) => { this.Focus(); }; // 2. 폼이 로드될 때 포커스를 폼 자체로 설정하여 버튼의 키 입력을 방지
         }
 
         private void C_Button_Click(object sender, EventArgs e) // [잡았을 때] 버튼을 실제로 클릭했을 때
