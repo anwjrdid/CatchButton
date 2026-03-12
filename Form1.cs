@@ -38,6 +38,7 @@ namespace CatchButton
         // 마우스가 버튼 영역에 진입했을 때 실행되는 이벤트 핸들러
         private void C_Button_MouseEnter(object sender, EventArgs e)
         {
+
             // 2. 가용 영역 계산 (버튼이 폼 테두리 밖으로 나가지 않게 버튼 크기만큼 제외)
             int maxX = this.ClientSize.Width - C_Button.Width;
             int maxY = this.ClientSize.Height - C_Button.Height;
@@ -53,12 +54,15 @@ namespace CatchButton
             this.Text = $"버튼 위치: ({nextX}, {nextY})";
 
             // [도망갈 때] 마우스가 버튼에 닿으려 할 때 
-            // 도망가는 소리 재생
-            player.URL = "Run.mp3";
-            player.controls.play();
-
             C_Button.Location = new Point(nextX, nextY);
             this.Text = $"버튼 위치: ({nextX}, {nextY})";
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            // 도망가는 소리 재생, 버튼이 아닌 배경을 클릭 시 
+            player.URL = "Run.mp3";
+            player.controls.play();
         }
     }
 }
