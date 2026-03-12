@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.C_Button = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // C_Button
@@ -45,11 +46,24 @@
             this.C_Button.Click += new System.EventHandler(this.C_Button_Click);
             this.C_Button.MouseEnter += new System.EventHandler(this.C_Button_MouseEnter);
             // 
+            // btnReset
+            // 
+            this.btnReset.Font = new System.Drawing.Font("굴림", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnReset.Location = new System.Drawing.Point(615, 342);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(127, 50);
+            this.btnReset.TabIndex = 1;
+            this.btnReset.Text = "Rest";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Visible = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 404);
+            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.C_Button);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -61,6 +75,7 @@
         #endregion
 
         private System.Windows.Forms.Button C_Button;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
